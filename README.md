@@ -25,6 +25,8 @@ headers = {
 r = requests.post(url, headers=headers, json=json)
 ```
 
+Make sure the bot has permission to send messages to your server.
+
 ## Standalone usage
 
 ```
