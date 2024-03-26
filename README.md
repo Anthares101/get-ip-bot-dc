@@ -4,7 +4,27 @@ Basically the idea is to have a way to get the bot's server's current IP. Useful
 
 ## Before you start
 
-Create a Discord bot and fill the variables in the `config.py` file. Make sure you enable the message content intent!
+Create a Discord bot and fill the variables in the `config.py` file. Make sure you register this application command!
+```python
+import requests
+
+
+url = "https://discord.com/api/v10/applications/<my_application_id>/commands"
+
+# This is an example CHAT_INPUT or Slash Command, with a type of 1
+json = {
+    "name": "locate",
+    "type": 1,
+    "description": "Returns the public IP address where the bot is located",
+}
+
+# For authorization use your bot token
+headers = {
+    "Authorization": "Bot <my_bot_token>"
+}
+
+r = requests.post(url, headers=headers, json=json)
+```
 
 ## Standalone usage
 
