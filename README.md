@@ -4,7 +4,7 @@ Basically the idea is to have a way to get the bot's server's current IP. Useful
 
 ## Before you start
 
-Create a Discord bot and fill the variables in the `config.py` file. Make sure you register this application command!
+Create a Discord bot and fill the variables in the `config.py` file. Register this application command and make sure the bot has permission to send messages to your server!
 ```python
 import requests
 
@@ -24,8 +24,6 @@ headers = {
 
 r = requests.post(url, headers=headers, json=json)
 ```
-
-Make sure the bot has permission to send messages to your server.
 
 ## Standalone usage
 
