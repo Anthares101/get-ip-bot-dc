@@ -11,7 +11,6 @@ import requests
 
 url = "https://discord.com/api/v10/applications/<my_application_id>/commands"
 
-# This is an example CHAT_INPUT or Slash Command, with a type of 1
 json = {
     "name": "locate",
     "type": 1,
