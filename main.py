@@ -7,7 +7,6 @@ from requests import get
 # Initial setup
 log_handler = discord.utils.setup_logging()
 intents = discord.Intents.default()
-intents.message_content = True
 
 # Prepare client
 application = discord.Client(intents=intents)
